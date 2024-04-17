@@ -2,11 +2,11 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{html,js}"],
   theme: {
-    screens:{
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
+    screens: {
+      sm: "480px",
+      md: "768px",
+      lg: "976px",
+      xl: "1440px",
     },
     extend: {
       colors: {
@@ -15,7 +15,11 @@ module.exports = {
         ulblue: "#0344dc",
         uwhite: "#ffffff",
       },
+      fontFamily: {
+        clashDisplay: ["ClashDisplay", "sans"],
+        Archivo: ["Archivo", "sans"],
+      },
     },
   },
   plugins: [],
-}
+};

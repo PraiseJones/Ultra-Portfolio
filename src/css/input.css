@@ -1,3 +1,43 @@
+@import url('clash-display.css');
+@import url('archivo.css');
+
+/* @font-face{
+    font-family: "ClashDisplay";
+    src: url(/src/css/clash-display.css);
+}
+
+@font-face{
+    font-family: "Archivo";
+    src: url(/src/css/archivo.css);
+} */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer{
+    .clash-bold{
+        font-family: 'ClashDisplay-Bold';
+    }
+    .clash-semibold{
+        font-family: 'ClashDisplay-Semibold';
+    }
+    .clash-regular{
+        font-family: 'ClashDisplay-Regular';
+    }
+    .clash-light{
+        font-family: 'ClashDisplay-Light';
+    }
+    .archivo-black{
+        font-family: 'Archivo-Black';
+    }
+    .archivo-regular{
+        font-family: 'Archivo-Regular';
+    }
+    .archivo-bold{
+        font-family: "Archivo-Bold";
+    }
+    .archivo-regitalic{
+        font-family: 'Archivo-BoldItalic';
+    }
+}

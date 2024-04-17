@@ -1,116 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Company Portfolio</title>
-    <!-- Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultra Inc.</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+    <!-- flaticons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <style>
-        /* Custom Styles */
-        .primary-color {
-            color: #01203f;
-        }
+  </head>
 
-        .secondary-color {
-            color: #ff1700;
-        }
-
-        .bg-primary {
-            background-color: #0344dc;
-        }
-
-        .bg-secondary {
-            background-color: #ffffff;
-        }
-    </style>
-</head>
-
-<body class="bg-secondary text-primary-color">
+  <body class="text-uwhite">
     <!-- Navigation -->
-    <nav class="bg-primary text-white p-4 flex justify-between items-center">
-        <div class="text-xl font-semibold">Your Company</div>
-        <ul class="flex space-x-4">
-            <li><a href="#home" class="hover:text-orange">Home</a></li>
-            <li><a href="#about" class="hover:text-orange">About</a></li>
-            <li><a href="#portfolio" class="hover:text-orange">Portfolio</a></li>
-            <li><a href="#contact" class="hover:text-orange">Contact</a></li>
+    <nav class="bg-ulblue sticky top-0">
+      <div
+        class="text-uwhite px-4 py-5 flex lg:justify-evenly justify-between items-center"
+      >
+        <div class="text-xl font-semibold">Ultra Inc</div>
+        <ul class="hidden lg:flex lg:space-x-4">
+          <li><a href="#home" class="hover:text-uorange">Home</a></li>
+          <li><a href="#about" class="hover:text-uorange">About</a></li>
+          <li><a href="#portfolio" class="hover:text-uorange">Portfolio</a></li>
         </ul>
+        <button
+          class="px-4 py-2 border-2 border-uwhite rounded-full cursor-pointer"
+        >
+          Contact Us
+        </button>
+      </div>
     </nav>
 
+    <section class="h-screen w-full bg-ulblue fixed top-0 z-[100000] lg:hidden hidden">
+      <header class="px-4 py-5 flex justify-between items-center">
+        <div class="text-xl font-semibold">Ultra Inc</div>
+        <button>Close</button>
+      </header>
+      <ul class="p-4 mt-4 md:mt-14 space-y-4 text-7xl md:text-8xl clash-bold">
+        <li><a href="#home" class="hover:text-uorange">Home</a></li>
+        <li><a href="#about" class="hover:text-uorange">About</a></li>
+        <li><a href="#portfolio" class="hover:text-uorange">Portfolio</a></li>
+        <li><a href="#contact" class="hover:text-uorange">Contact</a></li>
+      </ul>
+      <hr class="mx-4 mt-16 md:mt-36 border rounded-full" />
+      <div class="pt-8 px-5 flex flex-col md:flex-row items-center justify-between gap-3">
+        <div class="flex items-center justify-center gap-2">
+          <i class="fi fi-sr-marker text-2xl"></i>
+          <p class="text-2xl md:text-3xl archivo-bold">Somewhere on the Internet</p>
+        </div>
+        <div class="text-2xl md:text-3xl space-x-2">
+          <a href=""><i class="fi fi-brands-twitter-alt cursor-pointer"></i></a>
+          <a href=""><i class="fi fi-brands-instagram cursor-pointer"></i></a>
+          <a href=""><i class="fi fi-brands-whatsapp cursor-pointer"></i></a>
+          <a href=""><i class="fi fi-brands-facebook cursor-pointer"></i></a>
+        </div>
+      </div>
+    </section>
+
     <!-- Home Section -->
-    <section id="home" class="bg-secondary text-primary-color flex flex-col items-center justify-center h-screen">
-        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">Welcome to Your Company</h1>
-        <p class="text-lg md:text-xl mb-8">We create amazing things.</p>
-        <a href="#portfolio" class="bg-primary text-white px-8 py-3 rounded-full uppercase font-semibold hover:bg-secondary hover:text-primary-color transition duration-300 ease-in-out">View Our Work</a>
+    <section
+      id="home"
+      class="bg-gradient-to-br from-ublue to-ulblue flex flex-col items-center justify-center h-screen px-4"
+    >
+      <h1 class="text-7xl text-center md:text-8xl lg:text-9xl mb-3 clash-bold">
+        From Vision to <span class="text-uorange">Ultra-Reality</span>
+      </h1>
+      <p
+        class="text-lg text-center md:text-xl mb-8 archivo-regular px-4 md:px-8"
+      >
+        Branding, Software, Design, Printing - we solve problems and create
+        future, pixel by pixel.
+      </p>
+      <a
+        href="#portfolio"
+        class="bg-primary text-uwhite px-8 py-3 border-2 border-uwhite rounded-full uppercase font-semibold hover:text-uorange hover:border-uorange transition duration-300 ease-in-out"
+        >Contact Us</a
+      >
     </section>
 
     <!-- About Section -->
-    <section id="about" class="bg-primary text-white py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">About Us</h2>
-            <p class="text-lg leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ullamcorper mauris at velit vehicula, ac mollis mi accumsan. Ut maximus sapien et nisl ultricies, vel blandit metus vehicula. Quisque non sollicitudin lorem, nec elementum dui. Fusce quis lacus et libero fermentum cursus ac nec velit.</p>
-        </div>
+    <section id="about" class="bg-ulblue text-white py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl mb-8 clash-semibold">
+          About Us
+        </h2>
+        <p class="text-lg leading-relaxed archivo-regular">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          ullamcorper mauris at velit vehicula, ac mollis mi accumsan. Ut
+          maximus sapien et nisl ultricies, vel blandit metus vehicula. Quisque
+          non sollicitudin lorem, nec elementum dui. Fusce quis lacus et libero
+          fermentum cursus ac nec velit.
+        </p>
+      </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="bg-secondary text-primary-color py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">Our Portfolio</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Portfolio Items Go Here -->
-                <div class="bg-white p-4 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Project 1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Project 2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Project 3</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
+    <section id="portfolio" class="bg-secondary text-ublue py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
+          Our Portfolio
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Portfolio Items Go Here -->
+          <div class="bg-white p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-2">Project 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-2">Project 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-2">Project 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-primary text-white py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">Contact Us</h2>
-            <form class="max-w-md mx-auto">
-                <div class="mb-4">
-                    <label for="name" class="block mb-2">Name</label>
-                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md">
-                </div>
-                <div class="mb-4">
-                    <label for="email" class="block mb-2">Email</label>
-                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md">
-                </div>
-                <div class="mb-4">
-                    <label for="message" class="block mb-2">Message</label>
-                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md"></textarea>
-                </div>
-                <button type="submit" class="bg-secondary text-primary-color px-8 py-3 rounded-full uppercase font-semibold hover:bg-primary hover:text-white transition duration-300 ease-in-out">Send Message</button>
-            </form>
-        </div>
+    <section id="contact" class="bg-ulblue text-white py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
+          Contact Us
+        </h2>
+        <form class="max-w-md mx-auto">
+          <div class="mb-4">
+            <label for="name" class="block mb-2">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block mb-2">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block mb-2">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-secondary text-primary-color px-8 py-3 rounded-full uppercase font-semibold hover:bg-primary hover:text-white transition duration-300 ease-in-out"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-primary text-white text-center py-4">
-        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    <footer class="bg-ulblue text-white text-center py-4">
+      <p>&copy; 2024 Your Company. All rights reserved.</p>
     </footer>
 
     <!-- GSAP Animations -->
-    <script>
-        gsap.from("nav", { duration: 1, y: -50, opacity: 0, ease: "power2.out" });
-        gsap.from("section", { duration: 1, y: 50, opacity: 0, ease: "power2.out", delay: 0.5, stagger: 0.2 });
-        gsap.from("footer", { duration: 1, y: 50, opacity: 0, ease: "power2.out", delay: 1 });
-    </script>
-</body>
-
+    <script src="/src/js/gsap.js"></script>
+  </body>
 </html>
