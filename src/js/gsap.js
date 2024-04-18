@@ -1,16 +1,15 @@
-// gsap.from("nav", { duration: 1, y: -50, opacity: 0, ease: "power2.out" });
-// gsap.from("section", {
-//   duration: 1,
-//   y: 50,
-//   opacity: 0,
-//   ease: "power2.out",
-//   delay: 0.5,
-//   stagger: 0.2,
-// });
-// gsap.from("footer", {
-//   duration: 1,
-//   y: 50,
-//   opacity: 0,
-//   ease: "power2.out",
-//   delay: 1,
-// });
+const menuButton = document.getElementById('menubtn');
+const closeButton = document.getElementById('closebtn');
+const menuSection = document.getElementById('menu-sect');
+const navLinks = document.querySelectorAll('#menu-sect ul li');
+
+// Function to toggle menu visibility
+function toggleMenu(e) {
+    e.preventDefault();
+  menuSection.classList.toggle('hidden');
+
+}
+
+// Event listeners for menu button and close button
+menuButton.addEventListener('click', toggleMenu);
+closeButton.addEventListener('click', toggleMenu);
